@@ -4,7 +4,7 @@
  *
  * We will use quaternion based Kalman filtering to fuse 
  * Magnetometer, Accelerometer, and Rate Gyroscope (MARG) data into 
- * a clean (low-bias) attitude determination system.
+ * clean (low-bias) attitude/heading information.
  */
 
 #ifndef _IMU_H_
