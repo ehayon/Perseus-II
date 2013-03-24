@@ -6,6 +6,7 @@ TESTDIR = ./test
 LIBS = -lperseus
 LIBPATH = ./lib
 RM = rm -f
+CFLAGS = `pkg-config --cflags --libs gtk+-2.0`
 
 all: $(OBJ)
 	ar -rc $(NAME) $(OBJ)
