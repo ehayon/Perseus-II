@@ -6,14 +6,15 @@ TESTDIR = ./test
 LIBS = -lperseus
 LIBPATH = ./lib
 RM = rm -f
-CFLAGS = `pkg-config --cflags --libs gtk+-2.0`
+GTK_FLAGS = `pkg-config --cflags --libs gtk+-2.0`
+CFLAGS = $(GTK_FLAGS)
 
 all: $(OBJ)
 	ar -rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 pathing: all
-	cc -L$(LIBPATH) $(TESTDIR)/pathing.c $(LIBS) -o pathing
+	cc -L$(LIBPATH) $(TESTDIR)/pathing.c $(LIBS) -o pathtest $(GTK_FLAGS) 
 
 clean:
 	-$(RM) $(OBJ)
