@@ -1,5 +1,5 @@
 DIR = ./
-SRC = imu/imu.c pathing/pathview.c
+SRC = imu/imu.c pathing/pathview.c 
 OBJ = $(SRC:.c=.o)
 NAME = lib/libperseus.a
 TESTDIR = ./test
